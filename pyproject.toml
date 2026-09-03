@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "coffeebean"
+version = "0.1.0"
+description = "Offline impulsive-ANC simulation and speech-enhancement benchmark"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+  "matplotlib>=3.9",
+  "numpy>=1.26,<2.0",
+  "pystoi>=0.4.1",
+  "scipy>=1.14",
+  "soundfile>=0.13",
+]
+
+[project.optional-dependencies]
+enhance = [
+  "deepfilternet==0.5.6",
+  "torch==2.5.1",
+  "torchaudio==2.5.1",
+]
+live = ["sounddevice>=0.5.1"]
+
+[dependency-groups]
+dev = ["pytest>=8.3"]
+
+[project.scripts]
+coffeebean = "coffeebean.cli:main"
+coffeebean-demo = "coffeebean.demo:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/coffeebean"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

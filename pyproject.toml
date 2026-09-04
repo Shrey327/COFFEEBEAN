@@ -35,4 +35,5 @@ coffeebean-demo = "coffeebean.demo:main"
 packages = ["src/coffeebean"]
 
 [tool.pytest.ini_options]
+pythonpath = ["."]
 testpaths = ["tests"]

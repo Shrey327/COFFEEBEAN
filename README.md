@@ -168,7 +168,14 @@ The size-first edge target and its timing gate are documented in
 [edge/README.md](edge/README.md). Raspberry Pi Zero 2 W is provisional until it
 passes the on-device 60-second test; use Raspberry Pi 4 2 GB if it does not.
 
-## 4. Hackathon dashboard
+## 4. Retrain RNNoise
+
+The reproducible RNNoise v0.2 retraining stack is documented in
+[mlops/README.md](mlops/README.md). It provides pinned upstream sources,
+dataset/feature lineage, held-out validation, MLflow tracking, an Airflow 3 DAG,
+quantized C export, and a manual promotion checklist.
+
+## 5. Hackathon dashboard
 
 Launch the judge-facing desktop dashboard:
 

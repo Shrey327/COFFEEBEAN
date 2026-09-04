@@ -7,3 +7,6 @@ build/
 runs/
 samples/local/
 samples/real-noise/
+mlops/.env
+mlops/data/
+mlops/logs/
